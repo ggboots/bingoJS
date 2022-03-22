@@ -1,0 +1,46 @@
+@import "_variables.scss";
+@import "_mediaQueries.scss";
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+
+}
+
+.custom-container{
+    display:grid;
+    grid-gap:0.5rem;
+    grid-template-columns: 1fr;
+    
+    color:$txt-primary;
+    // background: $container-bg;
+    .row-custom{
+        grid-gap:0.5rem;
+        height:20vh; 
+        
+        .col-custom{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $container-fg;
+        }
+        .col-custom:hover{
+            color:$txt-secondary;
+        }
+    }
+}
+    
+
+@media only screen and (max-width:600px){
+    .custom-container{
+        background:red;
+        .row-custom{
+            display:flex;
+
+        }
+    }
+}
+
+// 430px

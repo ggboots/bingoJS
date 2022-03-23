@@ -8,6 +8,10 @@
     padding:0;
 
 }
+.custom-header{
+    display:flex; 
+    justify-content: center;
+}
 
 .custom-container{
     display:grid;
@@ -30,6 +34,11 @@
             color:$txt-secondary;
         }
     }
+}
+
+.custom-footer{
+    display:flex; 
+    justify-content: center;
 }
     
 

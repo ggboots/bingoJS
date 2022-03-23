@@ -5,6 +5,15 @@
   padding: 0;
 }
 
+.custom-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .custom-container {
   display: -ms-grid;
   display: grid;
@@ -34,6 +43,15 @@
 
 .custom-container .row-custom .col-custom:hover {
   color: #3f3f3f;
+}
+
+.custom-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media only screen and (max-width: 600px) {

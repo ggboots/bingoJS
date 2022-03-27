@@ -43,37 +43,62 @@ timerButton.addEventListener("click", () => {finished = true});
 function timeTime(){
 
     setInterval(countdownTimer, 1000);
-    
-    let randomNumber = Math.floor(Math.random() * 9);
-    console.log(randomNumber);
-    // Check that random number hasn't already been produced, if it has then rerun random
 
     fetch(jsonLocation)
     .then(res => res.json())
     .then(data => {
 
-        console.log(Object.entries(data));
+        let values = Object.values(data[0]);
+        // console.log(values);
+        let checkIfItemRepeats = [];
+        let checkIfValueRepeats = [];
+        
+        // .include for grid items -- this creates a random array of 9 numbers that are not the same
+        for(let i = 0; i < 9; i++) {
+            let randomNumber = Math.floor(Math.random() * 9);
+            let filteredItemArray = checkIfItemRepeats.includes(randomNumber); // this return a bool, if not in array add, if in array reset counter
 
-        //use values
-        console.log(Object.values(data[0]) );
-
-        for (let [key, value] of Object.entries(data[0])) {
-            console.log(`${key} is for ${value}`);
-        }
-
-        // for(let i = 0; i < 9; i++) {
-        //     results[randomNumber].innerText = data[0].element2;
+            if(filteredItemArray == false){
+                checkIfItemRepeats.push(randomNumber);
+            } else if (filteredItemArray == true) {
+                i--;
+            }
+        };
+        
+       // working method
+        // for(let i = 0; i < 9; i++){
+        //     let randomValue = Math.floor(Math.random() * values.length);
+        //     let filteredItemArray = checkIfValueRepeats.includes(randomValue); 
+            
+        //     if(filteredItemArray == false){
+        //         checkIfValueRepeats.push(randomValue);
+        //     } else if (filteredItemArray == true) {
+        //         i--;
+        //     }
         // }
 
-        results[0].innerText = data[Object.values[0]];
-        results[1].innerText = data[0].element2;
-        results[2].innerText = data[0];
-        results[3].innerText = data[0].scope;
-        results[4].innerText = data[0].higherOrderFunc;
-        results[5].innerText = data[0].destructingObjects;
-        results[6].innerText = data[0].recursion;
-        results[7].innerText = data[0].classes;
-        results[8].innerText = data[0].modules;
+        // unqiue array -- using Set()
+        let toBeFiltered = [];
+        for (let i = 0; i < 9; i++){
+            let randomValue = Math.floor(Math.random() * values.length);
+            toBeFiltered.push(randomValue);
+
+            let filteredItemArray = [...new Set(toBeFiltered)];
+            console.log(filteredItemArray);
+        }
+
+
+
+        
+        // console.log(checkIfItemRepeats);
+        // console.log(checkIfValueRepeats);
+
+        for (let i = 0; i < 9; i++){
+            // let gridItem = checkIfItemRepeats[i]; -- do not need, gridItems are not random, only values should be random
+            let jsonValue = checkIfValueRepeats[i];
+            let jsonValue1 = toBeFiltered[i];
+            results[i].innerText = values[jsonValue1];
+        }
     });
 
 }

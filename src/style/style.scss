@@ -13,6 +13,16 @@
     justify-content: center;
 }
 
+// .backdrop-transparent{
+//     position: fixed;
+//     background: transparent;
+//     backdrop-filter:blur(100px);
+//     color:white;
+//     height:80vh;
+//     width:100%;
+//     z-index: 2;
+// }
+
 .custom-container{
     display:grid;
     grid-gap:0.5rem;

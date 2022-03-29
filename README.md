@@ -11,4 +11,10 @@ the syntax and concepts shown in the bingo grid, the timer is to measure this
 
 > Bootstrap
 
+
+left to do:
+> stop timer when variable met in separate js file, and display time on screen
+> ( i ) icon, for information on each syntax
 > Parcel/ Gulp
+
+**work out live server unexpected reload issue 

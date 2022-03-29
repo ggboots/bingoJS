@@ -14,42 +14,38 @@
     <header>
         <div class="container mt-2 custom-header">
             <h1 class="mt-2">Bingo JS</h1>
-            <div class="" style="position: fixed; top:2vh; right: 5vw;"> i</div>
+            <div class="" style="position: fixed; top:2vh; right: 5vw; cursor: pointer;"><a href="">i</a></div>
         </div>
     </header>
 
     <div class="backdrop-transparent mt-5"></div>
-
         <div class="container-sm mt-5 custom-container">
             <div class="row row-custom">
-                <div id="grid-item1" class="col col-custom" onclick=""></div>
-                <div id="grid-item2" class="col col-custom"></div>
-                <div id="grid-item3" class="col col-custom"></div>
+                <div id="grid-item1" class="col col-custom" style="cursor: pointer;"></div>
+                <div id="grid-item2" class="col col-custom" style="cursor: pointer;"></div>
+                <div id="grid-item3" class="col col-custom" style="cursor: pointer;"></div>
             </div>
             <div class="row row-custom">
-                <div id="grid-item4" class="col col-custom"></div>
-                <div id="grid-item5" class="col col-custom"></div>
-                <div id="grid-item6" class="col col-custom"></div>
+                <div id="grid-item4" class="col col-custom" style="cursor: pointer;"></div>
+                <div id="grid-item5" class="col col-custom" style="cursor: pointer;"></div>
+                <div id="grid-item6" class="col col-custom" style="cursor: pointer;"></div>
             </div>
             <div class="row row-custom">
-                <div id="grid-item7" class="col col-custom"></div>
-                <div id="grid-item8" class="col col-custom"></div>
-                <div id="grid-item9" class="col col-custom"></div>
+                <div id="grid-item7" class="col col-custom" style="cursor: pointer;"></div>
+                <div id="grid-item8" class="col col-custom" style="cursor: pointer;"></div>
+                <div id="grid-item9" class="col col-custom" style="cursor: pointer;"></div>
             </div>
         </div>
-        
-        
         
         <footer>
             <div class="container mt-5 custom-footer">
                 <button type="button" id="timerButton" class="btn btn-success">Timer</button>
-                <!--Countdown to appear when button disappears <div>1:00MIN</div> -->
             </div>
-        <!-- <div id="countdown" class=""></div> -->
+            <div id="countdown" class="mt-4 custom-footer"></div>
     </footer>
     <script defer type="module" src="./app.js"></script>
     <script type="module" src="./gridSelect.js"></script>
-    <script type="module" src="./countdown.js"></script>
+    <script type="module" src="./timer.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 </body>
 </html>

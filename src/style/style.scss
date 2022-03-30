@@ -1,4 +1,5 @@
 @import "_variables.scss";
+// @import "./variables";
 @import "_mediaQueries.scss";
 
 
@@ -63,3 +64,7 @@
 }
 
 // 430px
+
+// swirl line ( ~ ), goes straight to place it is saved
+// goes to node_modules
+@import "~bootstrap/scss/bootstrap";

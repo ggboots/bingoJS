@@ -13,7 +13,7 @@ function assingGridItems(idElement) {
 }
 
 async function fetchData(JSON, gridItemLocation){
-    fetch(JSON)
+    fetch(JSON) 
     .then(res => res.json())
     .then(data => {      
         let values = Object.values(data[0]);
@@ -55,7 +55,6 @@ async function hasBeenClick(gridItemLocation){
     gridItemLocation[6].addEventListener("click", () => gridItemLocation[6].style = "background-color:red; color:black");
     gridItemLocation[7].addEventListener("click", () => gridItemLocation[7].style = "background-color:red; color:black");
     gridItemLocation[8].addEventListener("click", () => gridItemLocation[8].style = "background-color:red; color:black");
-
 
     // binding event, function needs to be set as reference
 

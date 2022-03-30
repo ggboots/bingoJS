@@ -12,15 +12,9 @@ import timer from './timer.js';
 const jsonLocation = '/griditems.json';
 const jsonDemoLocation = 'demogriditem.json';
 
-// const countdown = document.getElementById("countdown");
 const timerButton = document.getElementById("timerButton");
 
 let finished = false;
-
-// var seconds = 0;
-// var minutes = 0;
-
-// let clockTimer = `${minutes} : ${seconds.toLocaleString(undefined, {minimumIntegerDigits:2})} min`;
 
 
 timerButton.addEventListener("click", () => {
